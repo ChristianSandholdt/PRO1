@@ -2,6 +2,7 @@ package Exercise2.gui;
 
 import Exercise2.controller.Controller;
 import Exercise2.model.Company;
+import Exercise2.model.Customer;
 import Exercise2.model.Employee;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
@@ -167,6 +168,11 @@ public class CompanyPane extends GridPane {
             txfName.clear();
             txfHours.clear();
             txaEmployees.clear();
+
         }
-    }
-}
+        StringBuilder strBui = new StringBuilder();
+        for (Customer cst : company.getCustomers()){
+            strBui.append(cst).append("\n");
+        }
+        txaCustomers.setText(strBui.toString());
+}}
