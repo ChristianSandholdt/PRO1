@@ -27,5 +27,5 @@ public class Arrangement {
         }
         return sum;
     }
-
+//din mor
 }
