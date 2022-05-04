@@ -6,8 +6,8 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Product p1 = new Product(1, "Bog", 129.95);
-        Product p2 = new Product(2, "Seng", 3199.95);
+        Product p1 = new Product(1, "Bog", 129);
+        Product p2 = new Product(2, "Seng", 3199);
         Product p3 = new Product(3, "Taske", 650);
         Product p4 = new Product(4, "Sandwich", 30);
         Product p5 = new Product(5,"Penalhus", 100);
@@ -47,6 +47,20 @@ public class Test {
        c2.addOrder(o4);
        c2.addOrder(o5);
        c2.addOrder(o6);
+
+       Discount dp = new PercentDiscount(10);
+       Discount df = new FixedDiscount(100,500);
+
+
+       c1.setDiscount(df);
+       c2.setDiscount(dp);
+
+
+        System.out.println("Total pris: " + c1.totalBuy());
+        System.out.println("Total pris med discount: " + c1.totalBuyWithDiscount());
+        System.out.println();
+        System.out.println("Total pris: " + c2.totalBuy());
+        System.out.println("Total pris med discount: " + c2.totalBuyWithDiscount());
 
 
 
