@@ -1,6 +1,7 @@
 package Opgave1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Mechanic extends Person {
     private int yearOfEducation;
@@ -23,7 +24,6 @@ public class Mechanic extends Person {
         sum = getHourlyWage() * 37;
         return sum;
     }
-
 
 
 }
