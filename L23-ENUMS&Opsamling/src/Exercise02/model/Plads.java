@@ -7,7 +7,7 @@ public class Plads {
     private Område område;
     private static int standardTimePris = 50;
 
-    private final ArrayList<Reservation> reservationer = new ArrayList<>();
+    final ArrayList<Reservation> reservationer = new ArrayList<>();
 
     public Plads(int nr, Område område){
         this.nr = nr;

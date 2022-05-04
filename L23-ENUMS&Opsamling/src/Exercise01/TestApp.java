@@ -29,11 +29,6 @@ public class TestApp {
         System.out.println(samletPris(hunde, Puddel));
         System.out.println(samletPris(hunde, Bokser));
         System.out.println(samletPris(hunde, Terrier));
-
-
-
-
-
     }
 
     public static int samletPris(ArrayList<Hund> hunde, DogRace.Race race){
