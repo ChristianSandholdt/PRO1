@@ -14,11 +14,12 @@ public class Eclipse extends Figur {
 
     @Override
     public double Area() {
-        return Math.PI*radius1*radius1;
+        return Math.PI*radius1*radius2;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        String str = String.format("Eclipse %s radius1 %d radius2 %d", super.toString(),radius1, radius2);
+        return str;
     }
 }

@@ -13,4 +13,10 @@ public class Square extends Figur{
     public double Area() {
         return sideLength*sideLength;
     }
+
+    @Override
+    public String toString() {
+        String str = String.format("Square %s sidelength %d",super.toString(),sideLength);
+        return str;
+    }
 }

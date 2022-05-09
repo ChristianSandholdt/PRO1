@@ -13,7 +13,15 @@ public abstract class Figur {
 
     @Override
     public String toString() {
-        String s = String.format();
-        return "" + xPos + " " + yPos;
+        String s = String.format("(%d, %d)", xPos, yPos);
+        return s;
+    }
+
+    public void movexPos(int movexPos) {
+        this.xPos += xPos;
+    }
+
+    public void moveyPos(int moveyPos) {
+        this.yPos += yPos;
     }
 }

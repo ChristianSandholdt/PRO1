@@ -14,4 +14,10 @@ public class Circle extends Figur {
     public double Area() {
         return Math.PI * (radius*radius);
     }
+
+    @Override
+    public String toString() {
+        String str = String.format("Circle %s radius %d",super.toString(),radius);
+        return str;
+    }
 }

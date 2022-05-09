@@ -13,6 +13,12 @@ public class Rectangle extends Figur{
 
     @Override
     public double Area() {
-        return 0;
+        return sideLength2*sideLength1;
+    }
+
+    @Override
+    public String toString() {
+        String str = String.format("Rectangle %s sidelength1 %d sidelength2 %d", super.toString(),sideLength1,sideLength2);
+        return str;
     }
 }
