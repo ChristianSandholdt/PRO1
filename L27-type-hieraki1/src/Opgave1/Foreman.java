@@ -13,8 +13,6 @@ public class Foreman extends Mechanic {
 
 
     public int weeklySalary(){
-        int sum = 0;
-        sum = getHourlyWage() * 37 + weeklyBonus;
-        return sum;
+       return super.weeklySalary()+weeklyBonus;
     }
 }

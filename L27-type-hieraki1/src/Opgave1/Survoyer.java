@@ -9,9 +9,7 @@ public class Survoyer extends Mechanic{
     }
 
     public int weeklySalary(){
-        int sum = 0;
-        sum = (getHourlyWage() * 37) + (amountOfChecks*29);
-        return sum;
+        return super.weeklySalary() + amountOfChecks*29;
     }
 
 }

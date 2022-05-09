@@ -48,8 +48,8 @@ public class Test {
        c2.addOrder(o5);
        c2.addOrder(o6);
 
-       Discount dp = new PercentDiscount(10);
-       Discount df = new FixedDiscount(100,500);
+       Discount dp = new PercentDiscount(15);
+       Discount df = new FixedDiscount(250,1000);
 
 
        c1.setDiscount(df);

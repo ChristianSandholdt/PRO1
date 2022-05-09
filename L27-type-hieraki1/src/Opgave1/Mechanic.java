@@ -20,9 +20,7 @@ public class Mechanic extends Person {
     }
 
     public int weeklySalary(){
-        int sum = 0;
-        sum = getHourlyWage() * 37;
-        return sum;
+        return getHourlyWage() * 37;
     }
 
 
