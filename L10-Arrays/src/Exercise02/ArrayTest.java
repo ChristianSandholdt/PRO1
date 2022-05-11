@@ -36,7 +36,6 @@ public class ArrayTest {
     }
     //Exercise03
     public static int[] sumArrays(int[] a, int[] b){
-            int sumArrays = 0;
             int[] c = new int[a.length];
             for (int i = 0; i < a.length; i++){
                 c[i] = a[i] + b[i];

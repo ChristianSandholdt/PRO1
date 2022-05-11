@@ -8,7 +8,7 @@ public class WorkingBoy extends Employee {
     }
 
     public int weeklySalary(){
-        return super.getHourlySalary()*25;
+        return getHourlySalary()*25;
     }
 
 }
