@@ -1,4 +1,4 @@
-package Opgave3.ex3student;
+package Opgave3;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,7 +10,6 @@ public class Customer {
 
     // association 1 --> 0..* Order
     private final ArrayList<Order> orders = new ArrayList<>();
-    private ArrayList<Discount> discounts = new ArrayList<>();
 
     private Discount discount;
 
