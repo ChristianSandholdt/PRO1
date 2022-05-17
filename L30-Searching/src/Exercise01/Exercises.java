@@ -102,5 +102,27 @@ public class Exercises {
 
     //ex7
 
+    //ex 8
+    public static int searchAndReplace(int arr[], int number){
+        int index = -1;
+        int i = 0;
+
+        while (index == -1 && i < arr.length){
+            if (arr[i] == number && arr[i] != arr[0]){
+                int temp = arr[i];
+                arr[i] = arr[i-1];
+                arr[i-1] = temp;
+                index = i-1;
+            } else if (arr[i] != number){
+                i++;
+            } else if (arr[i] == 0 && arr[i] == number) {
+                index = -1;
+            }else
+                i++;
+
+        }
+        return index;
+    }
+
 
 }

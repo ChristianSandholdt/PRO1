@@ -1,6 +1,7 @@
 package Exercise01;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TestApp {
@@ -25,6 +26,12 @@ public class TestApp {
         ArrayList<String> Exc5 = new ArrayList<>(List.of(
                 "Kat","Hund", "Hund","Ko","Mus","Rotte","Hund"));
         System.out.println(Exercises.findAllIndices(Exc5, "Hund"));
+
+        //Exc 08
+        int[] Exc8 = {5,4,3,2,1};
+        System.out.println(Arrays.toString(Exc8));
+        System.out.println(Exercises.searchAndReplace(Exc8,1));
+        System.out.println(Arrays.toString(Exc8));
 
     }
 
