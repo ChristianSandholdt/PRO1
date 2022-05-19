@@ -1,6 +1,7 @@
 package Exercise4;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -32,14 +33,20 @@ public class Ex4 {
         for (int e : ints) {
             numbers.add(e);
         }
+        ArrayList<Integer> numbers2 = new ArrayList<>(numbers);
+        ArrayList<Integer> numbers3 = new ArrayList<>(numbers);
+        ArrayList<Integer> numbers4 = new ArrayList<>(numbers);
+
+
+        System.out.println("Bubble Sort");
         long bubbleSortTidFoer = System.currentTimeMillis();
         integerBubbleSort(numbers);
+        System.out.println(numbers);
         long bubbleSortTidEfter = System.currentTimeMillis();
         double bubbleSortTid = bubbleSortTidEfter - bubbleSortTidFoer;
         System.out.println("Tid for bubble sort: " + bubbleSortTid);
 
-
-        ArrayList<Integer> numbers2 = new ArrayList<>(numbers);
+        System.out.println("Selection Sort");
         long selectionSortTidFoer = System.currentTimeMillis();
         selectionSortInteger(numbers2);
         System.out.println(numbers2);
@@ -47,8 +54,7 @@ public class Ex4 {
         double selectionSortTid = selectionSortTidEfter - selectionSortTidFoer;
         System.out.println("Tid for selection sort: " + selectionSortTid);
 
-
-        ArrayList<Integer> numbers3 = new ArrayList<>(numbers);
+        System.out.println("Integer sort");
         long insertionSortTidFoer = System.currentTimeMillis();
         insertionSortInteger(numbers3);
         System.out.println(numbers3);
@@ -56,6 +62,13 @@ public class Ex4 {
         double insertionSortTid = insertionSortTidEfter - insertionSortTidFoer;
         System.out.println("Tid for insertion sort: " + insertionSortTid);
 
+        System.out.println("Collection Sort");
+        long collectionSortTidFoer = System.currentTimeMillis();
+        Collections.sort(numbers4);
+        System.out.println(numbers4);
+        long collectionSortTidEfter = System.currentTimeMillis();
+        double collectionSortTid = collectionSortTidEfter - collectionSortTidFoer;
+        System.out.println("Tid for collection sort: " + collectionSortTid);
 
     }
 
