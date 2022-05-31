@@ -40,6 +40,7 @@ public class Bestilling {
     public ArrayList<Plads> getPladser() {
         return pladser;
     }
+
     public LocalDate getDato(){
         return dato;
     }
