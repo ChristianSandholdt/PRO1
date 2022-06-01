@@ -1,8 +1,8 @@
 package model;
 
 public class FrivilligForening extends Frivillig{
-    private String foreningsNavn;
-    private int antalPersoner;
+    private final String foreningsNavn;
+    private final int antalPersoner;
 
     public FrivilligForening(String navn, String mobil, int maksAntalTimer, String foreningsNavn, int antalPersoner) {
         super(navn, mobil, maksAntalTimer);

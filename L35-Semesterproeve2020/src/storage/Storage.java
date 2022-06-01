@@ -5,7 +5,7 @@ import model.Frivillig;
 
 import java.util.ArrayList;
 
-public class Storage {
+public abstract class Storage {
     private static final ArrayList<Festival> festivaller = new ArrayList<>();
     private static final ArrayList<Frivillig> frivillige = new ArrayList<>();
 

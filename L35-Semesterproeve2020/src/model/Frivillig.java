@@ -2,12 +2,12 @@ package model;
 
 import java.util.ArrayList;
 
-public class Frivillig implements Comparable<Frivillig>{
-    private String navn;
-    private String mobil;
-    private int maksAntalTimer;
+public class Frivillig {
+    private final String navn;
+    private final String mobil;
+    private final int maksAntalTimer;
 
-    private final ArrayList<Vagt> vagter = new ArrayList<>();
+    final ArrayList<Vagt> vagter = new ArrayList<>(); //package visible
 
     public Frivillig(String navn, String mobil, int maksAntalTimer) {
         this.navn = navn;
@@ -27,15 +27,15 @@ public class Frivillig implements Comparable<Frivillig>{
         return maksAntalTimer;
     }
 
+    //-------------------------------------------------------------------------
+
     public ArrayList<Vagt> getVagter() {
         return new ArrayList<>(vagter);
     }
 
-    public void setMaksAntalTimer(int timer){
-        this.maksAntalTimer = maksAntalTimer-timer;
-    }
+    //-------------------------------------------------------------------------
 
-    public int ledigeTimer(Frivillig frivillig){
+    public int ledigeTimer(){
         int timerTilbage = maksAntalTimer;
         for (Vagt v: vagter) {
             timerTilbage -= v.getTimer();
@@ -43,16 +43,10 @@ public class Frivillig implements Comparable<Frivillig>{
         return timerTilbage;
     }
 
-
-
-    @Override
-    public String toString() {
-        return navn;
+    public String gaveBeskrivelse(){
+        if (vagter.size() > 0){
+            return navn + "\t" + "1";
+        } else return navn + "\t" + 0;
     }
 
-    @Override
-    public int compareTo(Frivillig o) {
-        return this.navn.compareTo(o.navn);
-    }
-}
 }

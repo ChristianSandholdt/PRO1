@@ -2,11 +2,12 @@ package model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Festival {
-    private String name;
-    private LocalDate fraDato;
-    private LocalDate tilDato;
+    private final String name;
+    private final LocalDate fraDato;
+    private final LocalDate tilDato;
 
     //Festival skal stå for oprettelse af job-objekter
     private final ArrayList<Job> jobs = new ArrayList<>();
@@ -16,13 +17,6 @@ public class Festival {
         this.fraDato = fraDato;
         this.tilDato = tilDato;
     }
-
-    public Job createJob(String kode, String beskrivelse, LocalDate dato, int timeHonorar, int antalTimer){
-        Job job = new Job(kode, beskrivelse, dato, timeHonorar, antalTimer);
-        jobs.add(job);
-        return job;
-    }
-
     public String getName() {
         return name;
     }
@@ -35,8 +29,15 @@ public class Festival {
         return tilDato;
     }
 
+
     public ArrayList<Job> getJobs() {
         return new ArrayList<>(jobs);
+    }
+
+    public Job createJob(String kode, String beskrivelse, LocalDate dato, int timeHonorar, int antalTimer){
+        Job job = new Job(kode, beskrivelse, dato, timeHonorar, antalTimer);
+        jobs.add(job);
+        return job;
     }
 
     public int budgetteretJobUdgift(){
@@ -49,17 +50,28 @@ public class Festival {
         return antalTimer*timehonorar;
     }
 
-    public ArrayList<String> gaverTilFrivillige(){
-
+    public int realiseretJobUdgift(){
+        int samletUdgift = 0;
+        for (Job j : jobs){
+            int antalTimerudfoert = 0;
+            for (Vagt v : j.getVagter()){
+                antalTimerudfoert += v.getTimer();
+            }
+            samletUdgift = antalTimerudfoert * j.getTimeHonorar();
+        }
+        return samletUdgift;
     }
 
-    /*public int realiseretJobUdgift(){
-        int temp = 0;
-        for (Job j: jobs){
-            if (j.getVagter().size() > 0){
-                j.getAntalTimer()
+    public ArrayList<String> gaverTilFrivillige(){
+        ArrayList<String> list = new ArrayList<>();
+        for (Job j : jobs){
+            for (Vagt v : j.getVagter()){
+                String s = v.getFrivillig().gaveBeskrivelse();
+                list.add(s);
             }
         }
-    }*/
+        Collections.sort(list);
+        return list;
+    }
 
 }
