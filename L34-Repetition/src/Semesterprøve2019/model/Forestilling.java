@@ -42,4 +42,16 @@ public class Forestilling {
         return bestillingerPåDagen.size();
     }
 
+    public LocalDate succesDato(){
+        LocalDate biggest = bestillinger.get(0).getDato();
+        int temp = 0;
+        for (Bestilling b : bestillinger){
+            if (b.getPladser().size() > temp){
+                temp = b.getPladser().size();
+                biggest = b.getDato();
+            }
+        }
+        return biggest;
+    }
+
 }
