@@ -17,6 +17,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="javafx.controls" level="application" />
+    <orderEntry type="library" name="javafx18" level="application" />
   </component>
 </module>
