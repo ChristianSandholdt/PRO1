@@ -1,4 +1,4 @@
-package model;
+package semesterprøve2018.model;
 
 import java.util.ArrayList;
 
@@ -51,10 +51,10 @@ public class Team {
     }
     //-----------------------------------------------------
 
-    boolean harTidsOverlap(model.Arrangement arrangement) {
+    boolean harTidsOverlap(Arrangement arrangement) {
         boolean harOverlap = false;
-        for (model.Tutor t : tutors) {
-            for (model.Arrangement a : t.getArrangements()) {
+        for (Tutor t : tutors) {
+            for (Arrangement a : t.getArrangements()) {
                 if (arrangement.getDate().equals(a.getDate())) {
                     if (arrangement.getStartTime().isAfter(a.getStartTime()) && arrangement.getStartTime().isBefore(a.getEndTime())) {
                         if (arrangement.getEndTime().isAfter(arrangement.getStartTime()) && arrangement.getEndTime().isBefore(arrangement.getEndTime())){

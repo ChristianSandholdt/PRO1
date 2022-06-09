@@ -1,4 +1,4 @@
-package model;
+package semesterprøve2018.model;
 
 import java.util.ArrayList;
 

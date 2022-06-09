@@ -1,4 +1,4 @@
-package gui;
+package semesterprøve2018.gui;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -9,15 +9,11 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import model.Arrangement;
-import model.Tutor;
+import semesterprøve2018.model.Arrangement;
+import semesterprøve2018.model.Tutor;
 
 public class GUI extends Application {
 
-    public static void main(String[] args) {
-        Application.launch(args);
-
-    }
     @Override
     public void start(Stage stage) {
         stage.setTitle("Administration af tutorer og arrangementer");
@@ -26,6 +22,7 @@ public class GUI extends Application {
 
         Scene scene = new Scene(pane);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -50,7 +47,7 @@ public class GUI extends Application {
         Label labelTutor = new Label("Tutorer");
         pane.add(labelTutor,0,0);
 
-        pane.add(lvTutor,0,1);
+        pane.add(lvTutor,0,2);
         lvTutor.setPrefWidth(200);
         lvTutor.setPrefHeight(250);
 
@@ -61,7 +58,7 @@ public class GUI extends Application {
 
         //Email
         Label lblEmail = new Label("Email: ");
-        pane.add(lblName,1,1);
+        pane.add(lblEmail,1,1);
         pane.add(txfEmail,2,1);
 
         //Arrangementer

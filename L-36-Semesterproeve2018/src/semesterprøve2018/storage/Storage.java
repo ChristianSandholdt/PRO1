@@ -1,9 +1,9 @@
-package storage;
+package semesterprøve2018.storage;
 
-import model.Arrangement;
-import model.Education;
-import model.Team;
-import model.Tutor;
+import semesterprøve2018.model.Arrangement;
+import semesterprøve2018.model.Education;
+import semesterprøve2018.model.Team;
+import semesterprøve2018.model.Tutor;
 
 import java.util.ArrayList;
 
