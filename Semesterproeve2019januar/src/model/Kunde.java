@@ -5,16 +5,16 @@ import java.util.ArrayList;
 
 public class Kunde {
 
-    private String kunde;
+    private String navn;
     private String mobil;
 
-    public Kunde(String kunde, String mobil) {
-        this.kunde = kunde;
+    public Kunde(String navn, String mobil) {
+        this.navn = navn;
         this.mobil = mobil;
     }
 
-    public String getKunde() {
-        return kunde;
+    public String getNavn() {
+        return navn;
     }
 
     public String getMobil() {
@@ -41,6 +41,11 @@ public class Kunde {
             }
         }
         return kundensBestillinger;
+    }
+
+    @Override
+    public String toString() {
+        return getNavn() + ", " + getMobil();
     }
 
 }

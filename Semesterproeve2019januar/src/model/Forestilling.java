@@ -71,4 +71,10 @@ public class Forestilling {
 //            if (b.getDato() == dato && b.getPladser().get().get)
 //        }
 //    }
+
+
+    @Override
+    public String toString() {
+        return getNavn() + ", " + getStartDato() + ", " + getSlutDato();
+    }
 }

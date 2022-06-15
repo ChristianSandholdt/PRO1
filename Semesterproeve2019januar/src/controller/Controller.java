@@ -14,7 +14,7 @@ public class Controller {
         return forestilling;
     }
 
-    public static Kunde gemKunde(String navn, String mobil){
+    public static Kunde opretKunde(String navn, String mobil){
         Kunde kunde = new Kunde(navn, mobil);
         Storage.gemKunde(kunde);
         return kunde;
@@ -25,9 +25,9 @@ public class Controller {
         Forestilling f2 = opretForestilling("Lykke Per", LocalDate.of(2019,2,1),LocalDate.of(2019,2,10));
         Forestilling f3 = opretForestilling("Chess",LocalDate.of(2019,1,21),LocalDate.of(2019,1,30));
 
-        Kunde k1 = new Kunde("Anders Hansen", "11223344");
-        Kunde k2 = new Kunde("Peter Jensen", "12345678");
-        Kunde k3 = new Kunde("Niels Madsen","12341234");
+        Kunde k1 = opretKunde("Anders Hansen", "11223344");
+        Kunde k2 = opretKunde("Peter Jensen", "12345678");
+        Kunde k3 = opretKunde("Niels Madsen","12341234");
     }
 
 
