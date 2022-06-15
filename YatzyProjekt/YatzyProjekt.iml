@@ -33,6 +33,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="lib" level="application" />
+    <orderEntry type="library" name="javafx18" level="application" />
+    <orderEntry type="library" name="javafx" level="application" />
   </component>
 </module>

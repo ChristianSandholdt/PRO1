@@ -40,6 +40,11 @@ public class Tutor {
     }
 
 
+//    public boolean harTidsOverlap(Arrangement arrangement){
+//        for (Arrangement a : getArrangements()) {
+//
+//        }
+//    }
 
     public double arrangementPris(){
         double sum = 0;
