@@ -57,7 +57,6 @@ public class Controller {
         m1.addVagt(v1);
         m2.addVagt(v1);
         m3.addVagt(v1);
-        m4.addVagt(v1);
 
         //Peters funktioner
         m1.addFunktion(f2); m1.addFunktion(f3); m1.addFunktion(f4);
